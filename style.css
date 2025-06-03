@@ -96,7 +96,8 @@ body{
     border-radius: var(--gap-sm);
     position: relative;
     border: 2px solid var(--color-gray-dark-6);
-
+    /* overflow: auto;
+    flex-wrap: nowrap; */
   /* Background layers: gradient border & inner background */
     /* background:
         linear-gradient(

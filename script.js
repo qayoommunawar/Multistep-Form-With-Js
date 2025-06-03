@@ -116,3 +116,39 @@ btnReset.addEventListener('click', () => {
 window.onload = function () {
     form.reset();
 }
+const wrapper = document.querySelector(".wrapper");
+let startX = 0;
+let currentStep = 0;
+const dots = document.querySelectorAll(".btn-circle");
+
+function showStep(index) {
+  steps.forEach((step, i) =>
+    step.classList.toggle("visually_hidden", i !== index)
+  );
+
+  dots.forEach((dot, i) =>
+    dot.classList.toggle("active_footer", i === index)
+  );
+}
+
+// Pointer down
+wrapper.addEventListener("pointerdown", (e) => {
+  startX = e.clientX;
+  wrapper.setPointerCapture(e.pointerId);
+});
+
+// Pointer up
+wrapper.addEventListener("pointerup", (e) => {
+  const diffX = e.clientX - startX;
+
+  if (Math.abs(diffX) > 50) {
+    if (diffX < 0 && currentStep < steps.length - 1) {
+      currentStep++;
+    } else if (diffX > 0 && currentStep > 0) {
+      currentStep--;
+    }
+    showStep(currentStep);
+  }
+
+  wrapper.releasePointerCapture(e.pointerId);
+});
