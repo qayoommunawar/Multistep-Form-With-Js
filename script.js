@@ -116,7 +116,7 @@ btnReset.addEventListener('click', () => {
 window.onload = function () {
     form.reset();
 }
-const wrapper = document.querySelector(".wrapper");
+const body = document.querySelector("body");
 let startX = 0;
 let currentStep = 0;
 const dots = document.querySelectorAll(".btn-circle");
@@ -132,13 +132,13 @@ function showStep(index) {
 }
 
 // Pointer down
-wrapper.addEventListener("pointerdown", (e) => {
+body.addEventListener("pointerdown", (e) => {
   startX = e.clientX;
-  wrapper.setPointerCapture(e.pointerId);
+  body.setPointerCapture(e.pointerId);
 });
 
 // Pointer up
-wrapper.addEventListener("pointerup", (e) => {
+body.addEventListener("pointerup", (e) => {
   const diffX = e.clientX - startX;
 
   if (Math.abs(diffX) > 50) {
@@ -150,5 +150,5 @@ wrapper.addEventListener("pointerup", (e) => {
     showStep(currentStep);
   }
 
-  wrapper.releasePointerCapture(e.pointerId);
+  body.releasePointerCapture(e.pointerId);
 });

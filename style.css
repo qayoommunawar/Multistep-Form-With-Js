@@ -74,7 +74,7 @@
 
 body{
     background-color: var(--color-gray-dark-1);
-   
+    touch-action: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
