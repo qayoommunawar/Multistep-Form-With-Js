@@ -1,0 +1,97 @@
+/* colors and gap variables */
+
+:root{
+
+    /* colors */
+    --color-primary-green: #5425AF;
+    --color-green-light: #845EEE;
+    --color-white: #E5E7EB;
+    --color-gray-dark-1: #121826 ;
+    --color-gray-dark-2: #212936 ;
+    --color-gray-dark-3: #394150 ;
+    --color-gray-dark-4: #4D5562 ;
+    --color-gray-dark-5: #A1A1A9 ;
+    --color-gray-dark-6: #845EEE4D ;
+
+    /* gap */
+
+    --gap-lg: 2rem;
+    --gap-md: 1.5rem;
+    --gap-sm: 1rem;
+}
+
+
+
+
+/* utility classes */
+
+/* gaps */
+
+.gap_md{
+    gap: var(--gap-md);
+}
+
+.gap_sml{
+    gap: var(--gap-sm);
+}
+
+
+/* flex properties */
+
+.flex_col{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex_button{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex_center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex_row{
+    display: flex;
+    align-items: center;
+    gap: calc(var(--gap-sm) - 10px);
+}
+
+.align_center{
+    align-self: center;
+}
+
+
+/* font sizes */
+h1{
+    font-size: calc(var(--gap-sm) + 4px);
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+h2{
+    font-size: calc(var(--gap-sm));
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+
+/* button */
+button{
+    border: none;
+    background: linear-gradient(180deg, #845eee 0%, #652cd1 100%);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.btn_continue{
+    padding: calc(var(--gap-sm)/2) var(--gap-lg);
+    border-radius: calc(var(--gap-md));
+    margin-block-start: calc(var(--gap-sm)/2);
+}
+
+.bnt_topic{
+    padding: calc(var(--gap-sm)/2);
+}

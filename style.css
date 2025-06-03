@@ -1,0 +1,206 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  
+  body {
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 6. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 7. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 8. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+ 
+
+  #root, #__next {
+    isolation: isolate;
+  }
+  
+
+
+
+/* ----------------- */
+
+/* colors and gap variables */
+
+:root{
+
+    /* colors */
+    --color-primary-green: #5425AF;
+    --color-green-light: #845EEE;
+    --color-white: #E5E7EB;
+    --color-gray-dark-1: #121826 ;
+    --color-gray-dark-2: #212936 ;
+    --color-gray-dark-3: #394150 ;
+    --color-gray-dark-4: #4D5562 ;
+    --color-gray-dark-5: #A1A1A9 ;
+    --color-gray-dark-6: #845EEE4D ;
+
+    /* gap */
+
+    --gap-lg: 2rem;
+    --gap-md: 1.5rem;
+    --gap-sm: 1rem;
+}
+
+/* general clasess */
+
+/* body resets */
+
+body{
+    background-color: var(--color-gray-dark-1);
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    color: var(--color-white);
+    padding: var(--gap-sm);
+    font-family: "Inter", sans-serif;
+    
+}
+
+
+
+.wrapper{
+    width: 90%;
+    max-width: 30rem;
+    margin: 0 auto;
+    background-color: var(--color-gray-dark-2);
+    padding: var(--gap-lg);
+    border-radius: var(--gap-sm);
+    position: relative;
+    border: 2px solid var(--color-gray-dark-6);
+
+  /* Background layers: gradient border & inner background */
+    /* background:
+        linear-gradient(
+            120deg,
+            rgba(229, 231, 235, 0.5) 0.05%,
+            rgba(229, 231, 235, 0) 25.05%
+        ); */
+    /* background-origin: border-box; */
+    /* background-clip: padding-box, border-box; */
+}
+
+
+.wrapper::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    top: -120px;
+    left: -100px;
+    background: url('resources/blur-radial.png') no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+
+
+
+/* Step-1 Section */
+
+input{
+    background-color: transparent;
+    border: 1px solid var(--color-gray-dark-5);
+    border-radius: calc(var(--gap-sm)/2);
+    outline: transparent;
+    padding: calc(var(--gap-sm)/2);
+    margin-block-start: calc(var(--gap-sm)/2);
+    color: var(--color-white);
+}
+
+input::placeholder {
+    color: var(--color-white);
+    font-size: calc(var(--gap-sm) - 4px);
+    font-weight: 500;
+}
+
+input:focus{
+    outline: 1px solid var(--color-white)
+}
+
+
+/* Section Step 2 */
+
+.step_2 ul{
+    list-style: none;
+}
+
+.step_2 ul li{
+    padding: var(--gap-sm) calc(var(--gap-sm)/2) ;
+    /* border: 1px solid var(--color-gray-dark-5); */
+    background-color: var(--color-gray-dark-4);
+    border-radius: calc(var(--gap-sm)/2);
+    font-size: calc(var(--gap-sm) - 4px);
+    cursor: pointer;
+}
+
+.btn_topic.active_topic{
+    background-color: var(--color-primary-green);
+}  
+
+
+/* Section Step 3 */
+
+.step_3 span{
+    color: var(--color-gray-dark-5);
+}
+
+.step_3 ul{
+    padding: calc(var(--gap-sm) - 4px) var(--gap-md);
+    padding-block-end: 0;
+}
+/* footer */
+.footer{
+    margin-block-start: var(--gap-sm);
+}
+
+
+
+.footer span{
+    color: var(--color-gray-dark-5);
+    font-size: calc(var(--gap-sm) - 4px);
+}
+
+.btn-circle{
+    width: calc(var(--gap-sm) - 4px);
+    height: calc(var(--gap-sm) - 4px);
+    background: none;
+    background-color :var(--color-gray-dark-2);
+    border-radius: 100%;
+}
+
+.active_footer{
+    background: linear-gradient(180deg, #845eee 0%, #652cd1 100%);
+    border: 8px solid var(--color-gray-dark-4);
+}
+
+
+.visually_hidden{
+    display: none;
+} 

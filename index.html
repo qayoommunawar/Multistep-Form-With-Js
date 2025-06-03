@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+      sizes="96x96"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="utility_classes.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Multi-step Register Form | devChallenges.io</title>
+
+    
+   
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <!-- <div class="radial">
+          <img src="resources/blur-radial.png" alt="" aria-hidden="true" class="radial_bg"> -->
+        <!-- </div> -->
+        <section class="flex_col gap_md step_1 steps">
+          <h1 class="step_heading">
+            Register
+          </h1>
+          <form action="#" class="flex_col gap_md">
+            <label for="name" class="flex_col">
+              Name
+              <input type="text" id="name" placeholder="Enter your name">
+            </label>
+            <label for="email" class="flex_col">
+              Email
+              <input type="email" id="email" placeholder="Example@gmail.com">
+            </label>
+          </form>
+          <button type="button" class="btn_submit btn_continue align_center">Continue</button>
+        </section>
+        <section class="flex_col gap_md step_2 steps visually_hidden">
+          <h1 class="step_heading">
+            Which topics you are interested in?
+          </h1>
+          <ul class="flex_button gap_sml">
+            <li class="btn_topic">Software Development</li>
+            <li class="btn_topic">User Experience</li>
+            <li class="btn_topic">Graphic Design</li>
+          </ul>
+          <button type="button" class="btn-next btn_continue align_center">Continue</button>
+        </section>
+        <section class="flex_col step_3 gap_md steps visually_hidden">
+          <h1 class="step_heading">
+            Summary
+          </h1>
+          <div class="summary_step1">
+            <div class="summary_heading_name flex_row">
+              <span class="light">Name:</span> <h2 class="summary_name">Name: Emily Johnson</h2>
+            </div>
+            <div class="summary_heading_email flex_row">
+              <span class="light">Email:</span> <h2 class="summary_email">Email: emily@emilyjohnsonstl.com</h2>
+            </div>
+          </div>
+          <div class="summary_step2">
+            <h2 class="summary_heading">
+              <span class="light">
+                Topics:
+              </span>
+            </h2>
+            <ul class="flex_col">
+              <li class="topics"></li>
+              <li class="topics"></li>
+              <li class="topics"></li>
+            </ul>
+          </div>
+          <button type="button" class="btn_reset btn_continue align_center">Continue</button>
+        </section>
+        
+      </div>
+      <div class="flex_center footer gap_sml">
+        <span class="footer_heading">
+          Step 3 out of 3
+        </span>
+        <div class="flex_center button_footer gap_sml">
+          <button class="btn-circle active_footer btn_circle1"></button>
+          <button class="btn-circle"></button>
+          <button class="btn-circle"></button>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
